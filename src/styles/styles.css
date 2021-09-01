@@ -1,0 +1,27 @@
+:root{
+    --principal: #11324D;
+    --second: #6B7AA1;
+    --third: #C1CFC0;
+    --fourth: #E7E0C9;
+    --black: #131313;
+    --white: #faf3f3;
+}
+
+.principal{
+    min-height: 100vh;
+    width:100vw;
+    background-color: var(--principal);
+}
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.form-react{
+    border-radius: 25px;
+    max-width: 500px;
+    width: 100%;
+    padding: 70px 20px;
+    background-color: var(--white);
+}
