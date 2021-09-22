@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import IndexContainer from '../containers/IndexContainer';
+import WelcomeContainer from '../containers/WelcomeContainer';
 
 const App = () =>{
     return(
@@ -9,9 +10,12 @@ const App = () =>{
                 <Route exact path="/">
                     <IndexContainer />
                 </Route>
-                <Route path="/first">
-                    <div>
-                        <h1>Hola First!</h1>
+                <Route exact path="/welcome">
+                    <WelcomeContainer />
+                </Route>
+                <Route>
+                    <div className="container mt-5 text-center">
+                        <h1>404 Not found</h1>
                     </div>
                 </Route>
             </Switch>
