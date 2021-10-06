@@ -29,8 +29,12 @@ const WelcomeContainer = () =>{
         setItem({id:'', name:''});
     }
 
+    const trash = (e) => setData( data.filter( item => item.id !== e.target.id ) );
+
+    const trashItem = (item) => setData( data.filter( itemOld => !(itemOld.id === item.id && itemOld.name === item.name) ) );
+
     return(
-        <Welcome add={add} onChange={onChange} item={item} data={data} form={form} goBack={goBack} />
+        <Welcome trashItem={trashItem} add={add} trash={trash} onChange={onChange} item={item} data={data} form={form} goBack={goBack} />
     )
 };
 
